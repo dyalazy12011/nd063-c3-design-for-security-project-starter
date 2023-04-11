@@ -1,5 +1,9 @@
 
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+- Update the inbound configuration to allow specific port that need by application (80, 8080, 443). Deny other ports (22, 23, ...).
+- Move the Web Service Instance to private subnet.
 
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Implement role-based access control for Web Service Application. Only business user can access secret recipes.
+- Restrict access to secret recipes bucket from EC2 instance.

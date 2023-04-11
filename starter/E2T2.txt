@@ -1,3 +1,14 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
+- Public IP is assigned to EC2 instance and too much ports are openning (21 - UDP, 23 - Telnet)
+- Root account does not enable MFA, password policy too simple.
+- S3 bucket does not block the public access and does not enable encryption.
+- Security group unrestrict imcomming traffic in specified ports.
+- Cloudtrail does not enable.
+
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+- Do not assign public IP to EC2 instance. Just open specific port for application (80/8080/443)
+- Force enable MFA for all AWS account. Password policy must have upper, lower character, number and special character.
+- Block public access to S3 bucket and enable the encryption, versioning.
+- Restrict specific incomming port in security group. Application must have authentication, authorization to restrict access also.
+- Enable Cloudtrail.

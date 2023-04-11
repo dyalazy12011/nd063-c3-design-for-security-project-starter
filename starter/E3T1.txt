@@ -1,3 +1,6 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
+It shows alert about unauthorized access to Web Service Instance from Attack Instance via port 22.
+Then it triggers the Malware scan.
 
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+AWS Guard Duty analyzes and processes the data from AWS CloudTrail management events, AWS CloudTrail event logs, VPC flow logs, and DNS logs to detect the problem
